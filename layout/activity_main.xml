@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/timetable_manager"
+        android:textSize="24sp"
+        android:textColor="@color/colorPrimary"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Task Input Field -->
+    <EditText
+        android:id="@+id/taskInput"
+        style="@style/CustomEditText"
+        android:hint="@string/hint_task"
+        android:autofillHints="username"
+        android:inputType="text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/heading"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/edit_text_color"
+        android:textColorHint="@color/colorHintText"
+        />
+
+    <!-- Date Input Field -->
+    <EditText
+        android:id="@+id/dateInput"
+        style="@style/CustomEditText"
+        android:hint="@string/hint_date"
+        android:autofillHints="date"
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/taskInput"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/edit_text_color"
+        android:textColorHint="@color/colorHintText"
+        />
+
+    <!-- Time Input Field -->
+    <EditText
+        android:id="@+id/timeInput"
+        style="@style/CustomEditText"
+        android:hint="@string/hint_time"
+        android:autofillHints="time"
+        android:inputType="time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dateInput"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:textColor="@color/edit_text_color"
+        android:textColorHint="@color/colorHintText"
+        />
+
+    <!-- Add Task Button -->
+    <Button
+        android:id="@+id/addTaskButton"
+        style="@style/CustomButton"
+        android:text="@string/add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timeInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/colorButtonText"
+        android:backgroundTint="@color/colorButtonDefault" />
+
+    <!-- Task List View -->
+    <ListView
+        android:id="@+id/taskListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addTaskButton"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
